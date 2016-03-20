@@ -44,44 +44,52 @@ body header h1 {
   font: 30px 'Maven Pro', sans-serif;
   text-shadow: 3px 2px 1px #000000;
 }
-body nav,
-body section {
-  max-width: 900px;
-}
 body nav {
   overflow: visible;
   padding: 10.66666667px 32px;
   background: linear-gradient(#000000, #151515);
   border-top: 2px solid;
   border-top-color: #2a2a29;
-  border-bottom: 2px solid;
-  border-bottom-color: #414141;
+  box-shadow: 0 2px 4px #303030;
 }
-body nav a {
+body nav div {
+  margin: 0 auto;
+}
+body nav div a {
+  display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  background: linear-gradient(#2a2a29, #000000);
   color: #b6b6b6;
-  display: inline-block;
-  font-size: 32px;
-  padding: 10.66666667px;
+  font-size: 33px;
+  padding: 14.66666667px;
   height: 32px;
   width: 32px;
   margin-right: 16px;
-  border-radius: 32px;
+  -moz-transition: 120ms linear color;
+  -o-transition: 120ms linear color;
+  -webkit-transition: 120ms linear color;
+  transition: 120ms linear color;
+  -moz-transition-delay: 20ms;
+  -o-transition-delay: 20ms;
+  -webkit-transition-delay: 20ms;
+  transition-delay: 20ms;
 }
-body nav a:hover {
-  color: #dcdcdc;
-  opacity: 0.84;
-  box-shadow: 2px 2px 1px #000000;
+body nav div a:hover {
+  -moz-transition: 100ms linear color;
+  -o-transition: 100ms linear color;
+  -webkit-transition: 100ms linear color;
+  transition: 100ms linear color;
+  color: #d5d5d5;
 }
-body nav a.connect {
+body nav div a.connect {
   float: right;
-}
-body section {
-  max-width: 900px;
 }
 body section h2,
 body section h3 {
   color: #b6b6b6;
+  margin-bottom: 32px;
+}
+body nav > div,
+body section {
+  max-width: 900px;
 }

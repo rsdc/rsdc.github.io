@@ -14,87 +14,118 @@
 @padding: 32px;
 @max-width: 900px;
 
-.reset-margin() { margin: 0; padding: 0; }
-.reset-height() { height: 100%; overflow: hidden; }
+.reset-margin() {
+    margin: 0;
+    padding: 0;
+}
 
-html, body, div, h1, h2, h3 { .reset-margin() }
-html, body { .reset-height() }
+.reset-height() {
+    height: 100%;
+    overflow: hidden;
+}
 
-body {       
-    background: @background-0;    
-    
+.transition(@param) {
+    -moz-transition: @param;
+    -o-transition: @param;
+    -webkit-transition: @param;
+    transition: @param;
+}
+
+.transition-delay(@param) {
+    -moz-transition-delay: @param;
+    -o-transition-delay: @param;
+    -webkit-transition-delay: @param;
+    transition-delay: @param;
+}
+
+html, body, div, h1, h2, h3 {
+    .reset-margin()
+}
+
+html, body {
+    .reset-height()
+}
+
+body {
+    background: @background-0;
     color: @color-0;
-
-    font: 18px/24px @font-0;    
+    font: 18px/24px @font-0;
     text-shadow: 2px 1px 0 @base-1;
-    
     cursor: default;
-    p { cursor: text; }
 
-    header, section { 
+    p {
+        cursor: text;
+    }
+
+    header, section {
         margin: 0 auto;
         padding: @padding;
     }
-    
-    header {
-        text-align: center; 
-        background: @background-1; 
 
-        h1, img {             
+    header {
+        text-align: center;
+        background: @background-1;
+
+        h1, img {
             margin: 10px auto;
             cursor: pointer;
 
-            &:hover { opacity: 0.8; }
+            &:hover {
+                opacity: 0.8;
+            }
         }
 
-        h1 { 
-            font: 30px @font-0; 
+        h1 {
+            font: 30px @font-0;
             text-shadow: 3px 2px 1px @base-0;
         }
-    }
-
-    nav, section { 
-        max-width: @max-width;        
     }
 
     nav {
         overflow: visible;
         padding: (@padding / 3) @padding;
-        
-        background: linear-gradient(@base-0, darken(@base-1, 8%));        
+        background: linear-gradient(@base-0, darken(@base-1, 8%));
         border-top: 2px solid;
         border-top-color: @base-1;
-        border-bottom: 2px solid;
-        border-bottom-color: @background-2;
+        box-shadow: 0 2px 4px darken(@background-1, 2%);
 
-        a {
-            text-decoration: none;
-            cursor: pointer;
-            background: linear-gradient(@base-1, @base-0);
-            color: @color-1;
-            display: inline-block;
-            font-size: ((@padding * 2) / 2);
-            padding: (@padding / 3);            
-            height: (@padding);
-            width: (@padding);
-            margin-right: (@padding / 2);
-            //border: 1px solid @color-0;
-            border-radius: (@padding);
+        div {
+            margin: 0 auto;
 
-            &:hover {
-                color: lighten(@color-1, 15%);
-                opacity: 0.84;
-                box-shadow: 2px 2px 1px @base-0;
+            a {
+                @font-size: ((@padding * 2) / 2) + 1;
+                
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+                color: @color-1;
+                font-size: @font-size;
+                padding: (@padding / 3) + 4;
+                height: (@padding);
+                width: (@padding);
+                margin-right: (@padding / 2);                
+                
+                .transition(120ms linear color);
+                .transition-delay(20ms);
+
+                &:hover {
+                    .transition(100ms linear color);
+                    color: lighten(@color-1, 12%);                   
+                }
+
+                &.connect { float: right; }
             }
-
-            &.connect { float: right; }
         }
-        
     }
 
-    section { 
-        max-width: @max-width;
+    section {
+        h2, h3 {
+            color: @color-1;
+            margin-bottom: 32px;
+        }
+    }
 
-        h2, h3 { color: @color-1; }
+    nav > div, section {
+        max-width: @max-width;
     }
 }
