@@ -1,3 +1,53 @@
-﻿body {
-  padding: 12px;
+﻿html,
+body,
+div,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: linear-gradient(#2a2a29, #1c1c1c);
+  color: #efefef;
+  font: 18px/24px 'Maven Pro', sans-serif;
+  text-shadow: 2px 1px 0 #2a2a29;
+  cursor: default;
+}
+body p {
+  cursor: text;
+}
+body nav,
+body section {
+  margin: 0 auto;
+  padding: 32px;
+}
+body nav {
+  text-align: center;
+  background: #353535;
+}
+body nav h1,
+body nav img {
+  margin: 10px auto;
+  cursor: pointer;
+}
+body nav h1:hover,
+body nav img:hover {
+  opacity: 0.8;
+}
+body nav h1 {
+  font: 30px 'Maven Pro', sans-serif;
+  text-shadow: 3px 2px 1px #000000;
+}
+body section {
+  max-width: 900px;
+}
+body section h2,
+body section h3 {
+  color: #b6b6b6;
 }

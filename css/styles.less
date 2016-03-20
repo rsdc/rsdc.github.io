@@ -1,3 +1,59 @@
-body {
-    padding: 12px;
+@base-0: #000000;
+@base-1: #2a2a29;
+@base-2: #1c1c1c;
+
+@background-0: linear-gradient(@base-1, @base-2);
+@background-1: #353535;
+@background-2: #414141;
+@color-0: #efefef;
+@color-1: #b6b6b6;
+
+@font-0: 'Maven Pro', sans-serif;
+@font-1: 'Abel', sans-serif;
+
+@padding: 32px;
+
+.reset-margin() { margin: 0; padding: 0; }
+.reset-height() { height: 100%; overflow: hidden; }
+
+html, body, div, h1, h2, h3 { .reset-margin() }
+html, body { .reset-height() }
+
+body {       
+    background: @background-0;    
+    
+    color: @color-0;
+
+    font: 18px/24px @font-0;    
+    text-shadow: 2px 1px 0 @base-1;
+    
+    cursor: default;
+    p { cursor: text; }
+
+    nav, section { 
+        margin: 0 auto;
+        padding: @padding;
+    }
+
+    nav {
+        text-align: center; 
+        background: @background-1; 
+
+        h1, img {             
+            margin: 10px auto;
+            cursor: pointer;
+
+            &:hover { opacity: 0.8; }
+        }
+
+        h1 { 
+            font: 30px @font-0; 
+            text-shadow: 3px 2px 1px @base-0;
+        }
+    }
+
+    section { 
+        max-width: 900px;         
+        h2, h3 { color: @color-1;}
+    }
 }

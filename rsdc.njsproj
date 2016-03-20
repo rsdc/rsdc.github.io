@@ -34,6 +34,7 @@
       <DependentUpon>css\styles.css</DependentUpon>
     </Content>
     <Content Include="google4ceec0005c9ae52c.html" />
+    <Content Include="images\rsdc.logo.gplus..edit.png" />
     <Content Include="index.html" />
     <Content Include="index.old.html" />
     <Content Include="package.json" />
