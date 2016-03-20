@@ -16,7 +16,6 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
-    <Compile Include="LICENSE" />
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
     <None Include="compilerconfig.json" />
