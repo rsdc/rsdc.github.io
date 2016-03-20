@@ -24,6 +24,7 @@
       <SubType>Content</SubType>
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
+    <Content Include="css\icomoon.css" />
     <Content Include="css\styles.css">
       <SubType>Content</SubType>
       <DependentUpon>css\styles.less</DependentUpon>
@@ -33,6 +34,9 @@
       <SubType>Content</SubType>
       <DependentUpon>css\styles.css</DependentUpon>
     </Content>
+    <Content Include="fonts\icomoon.svg" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
     <Content Include="google4ceec0005c9ae52c.html" />
     <Content Include="images\rsdc.logo.gplus..edit.png" />
     <Content Include="index.html" />
@@ -43,14 +47,6 @@
     <Content Include="css\ie.css" />
     <Content Include="css\normalize.css" />
     <Content Include="css\oldstyles.css" />
-    <Content Include="fonts\OpenSans-Bold-webfont.svg" />
-    <Content Include="fonts\OpenSans-BoldItalic-webfont.svg" />
-    <Content Include="fonts\OpenSans-Italic-webfont.svg" />
-    <Content Include="fonts\OpenSans-Light-webfont.svg" />
-    <Content Include="fonts\OpenSans-LightItalic-webfont.svg" />
-    <Content Include="fonts\OpenSans-Regular-webfont.svg" />
-    <Content Include="fonts\OpenSans-Semibold-webfont.svg" />
-    <Content Include="fonts\OpenSans-SemiboldItalic-webfont.svg" />
     <Content Include="images\bullet.png" />
     <Content Include="images\hr.gif" />
     <Content Include="images\nav-bg.gif" />

@@ -12,6 +12,7 @@
 @font-1: 'Abel', sans-serif;
 
 @padding: 32px;
+@max-width: 900px;
 
 .reset-margin() { margin: 0; padding: 0; }
 .reset-height() { height: 100%; overflow: hidden; }
@@ -30,12 +31,12 @@ body {
     cursor: default;
     p { cursor: text; }
 
-    nav, section { 
+    header, section { 
         margin: 0 auto;
         padding: @padding;
     }
-
-    nav {
+    
+    header {
         text-align: center; 
         background: @background-1; 
 
@@ -52,8 +53,48 @@ body {
         }
     }
 
+    nav, section { 
+        max-width: @max-width;        
+    }
+
+    nav {
+        overflow: visible;
+        padding: (@padding / 3) @padding;
+        
+        background: linear-gradient(@base-0, darken(@base-1, 8%));        
+        border-top: 2px solid;
+        border-top-color: @base-1;
+        border-bottom: 2px solid;
+        border-bottom-color: @background-2;
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            background: linear-gradient(@base-1, @base-0);
+            color: @color-1;
+            display: inline-block;
+            font-size: ((@padding * 2) / 2);
+            padding: (@padding / 3);            
+            height: (@padding);
+            width: (@padding);
+            margin-right: (@padding / 2);
+            //border: 1px solid @color-0;
+            border-radius: (@padding);
+
+            &:hover {
+                color: lighten(@color-1, 15%);
+                opacity: 0.84;
+                box-shadow: 2px 2px 1px @base-0;
+            }
+
+            &.connect { float: right; }
+        }
+        
+    }
+
     section { 
-        max-width: 900px;         
-        h2, h3 { color: @color-1;}
+        max-width: @max-width;
+
+        h2, h3 { color: @color-1; }
     }
 }

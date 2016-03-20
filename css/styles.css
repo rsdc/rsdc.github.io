@@ -22,27 +22,61 @@ body {
 body p {
   cursor: text;
 }
-body nav,
+body header,
 body section {
   margin: 0 auto;
   padding: 32px;
 }
-body nav {
+body header {
   text-align: center;
   background: #353535;
 }
-body nav h1,
-body nav img {
+body header h1,
+body header img {
   margin: 10px auto;
   cursor: pointer;
 }
-body nav h1:hover,
-body nav img:hover {
+body header h1:hover,
+body header img:hover {
   opacity: 0.8;
 }
-body nav h1 {
+body header h1 {
   font: 30px 'Maven Pro', sans-serif;
   text-shadow: 3px 2px 1px #000000;
+}
+body nav,
+body section {
+  max-width: 900px;
+}
+body nav {
+  overflow: visible;
+  padding: 10.66666667px 32px;
+  background: linear-gradient(#000000, #151515);
+  border-top: 2px solid;
+  border-top-color: #2a2a29;
+  border-bottom: 2px solid;
+  border-bottom-color: #414141;
+}
+body nav a {
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(#2a2a29, #000000);
+  color: #b6b6b6;
+  display: inline-block;
+  font-size: 32px;
+  padding: 10.66666667px;
+  height: 32px;
+  width: 32px;
+  margin-right: 16px;
+  border-radius: 32px;
+}
+body nav a:hover {
+  color: #dcdcdc;
+  opacity: 0.84;
+  box-shadow: 2px 2px 1px #000000;
+}
+body nav a.connect {
+  float: right;
 }
 body section {
   max-width: 900px;
