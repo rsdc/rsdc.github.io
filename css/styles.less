@@ -41,6 +41,21 @@
     transition-delay: @param;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);         
+}
+ 
+
+::-webkit-scrollbar-thumb {
+    background: #000000; 
+    -webkit-border-radius: 1px;    
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.5); 
+}
+
 html, body, div, h1, h2, h3 {
     .reset-margin()
 }
@@ -49,13 +64,15 @@ html, body {
     .reset-height()
 }
 
+
 body {
     background: @background-0;
     color: @color-0;
     font: 18px/24px @font-0;
     text-shadow: 2px 1px 0 @base-1;
-    cursor: default;
-
+    cursor: default;    
+    overflow-y: auto;
+    
     a { 
         color: @color-0; 
         text-decoration: none;
