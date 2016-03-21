@@ -78,10 +78,8 @@ body nav div a {
   color: #b6b6b6;
   font-size: 33px;
   padding: 14.66666667px;
-  padding-right: 25.33333333px;
+  padding-right: 21.33333333px;
   padding-left: 0;
-  height: 32px;
-  width: 32px;
   margin-right: 16px;
   -moz-transition: 120ms linear color;
   -o-transition: 120ms linear color;
@@ -134,13 +132,15 @@ body section {
 @media screen and (max-width: 700px) {
   body nav {
     overflow-y: auto;
+    padding: 10.66666667px;
   }
   body nav div {
     text-align: center;
   }
   body nav div a {
-    font-size: 30px;
-    margin-right: 10.66666667px;
+    font-size: 42.66666667px;
+    padding: 10.66666667px;
+    margin: 10.66666667px;
   }
   body nav div a.connect {
     float: none;
