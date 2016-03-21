@@ -156,16 +156,24 @@ body {
     nav > div, section { max-width: @max-width; }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
-    body nav > div {
+    body nav { 
+        overflow-y: auto;
 
-        a {
-            @font-size: ((@padding * 2) / 2) - 2;
-            font-size: @font-size;
-            margin-right: (@padding / 3);                                        
+        div {
+            text-align: center;
+
+            a {
+                    
+                @font-size: ((@padding * 2) / 2) - 2;
+                font-size: @font-size;
+                margin-right: (@padding / 3);                                        
+
+                &.connect { float: none; }
+            }
+
+            .icon-terminal { display: none; }
         }
-
-        .icon-terminal { display: none; }
     }
 }

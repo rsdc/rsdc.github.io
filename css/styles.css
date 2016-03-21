@@ -131,12 +131,21 @@ body nav > div,
 body section {
   max-width: 900px;
 }
-@media screen and (max-width: 600px) {
-  body nav > div a {
+@media screen and (max-width: 700px) {
+  body nav {
+    overflow-y: auto;
+  }
+  body nav div {
+    text-align: center;
+  }
+  body nav div a {
     font-size: 30px;
     margin-right: 10.66666667px;
   }
-  body nav > div .icon-terminal {
+  body nav div a.connect {
+    float: none;
+  }
+  body nav div .icon-terminal {
     display: none;
   }
 }
