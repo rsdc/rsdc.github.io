@@ -50,6 +50,7 @@
     <Content Include="images\hr.gif" />
     <Content Include="images\nav-bg.gif" />
     <Compile Include="js\respond.js" />
+    <Content Include="robots.txt" />
     <Content Include="schema\logo.json" />
     <Content Include="schema\sitemap.xml" />
     <Content Include="src\index.html" />

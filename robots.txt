@@ -1,0 +1,8 @@
+﻿User-agent: *
+Disallow: /bin/
+Disallow: /obj/
+Disallow: /.vs/
+Disallow: /.vscode/
+Disallow: /.git/
+Disallow: /.gitignore
+Disallow: /.gitattributes
