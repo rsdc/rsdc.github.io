@@ -101,6 +101,11 @@ body nav div a:hover {
 body nav div a.connect {
   float: right;
 }
+body section a,
+body section a:visited {
+  font: 20px 'Maven Pro', sans-serif;
+  color: #ffcc00;
+}
 body section h2 {
   font-size: 24px;
 }
