@@ -1,0 +1,6 @@
+﻿{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "http://rsdc.github.io",
+  "logo": "http://rsdc.github.io/images/rsdc.logo.png"
+}

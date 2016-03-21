@@ -38,9 +38,6 @@ body a {
 body a:visited {
   color: #efefef;
 }
-body p {
-  cursor: text;
-}
 body header,
 body section {
   margin: 0 auto;
@@ -112,21 +109,34 @@ body section h2,
 body section h3 {
   color: #609dcf;
   margin-top: 12px;
-  margin-bottom: 36px;
-}
-body section p {
   margin-bottom: 32px;
+}
+body section p:last-child {
+  margin-bottom: 16px;
+}
+body section p:not(:last-child) {
+  margin-bottom: 32px;
+}
+body section:last-child {
+  margin-bottom: 92px;
+}
+body section:not(:last-child) {
+  padding-bottom: 0;
+}
+body section#share > img {
+  background: #000;
+  padding: 32px;
 }
 body nav > div,
 body section {
   max-width: 900px;
 }
 @media screen and (max-width: 600px) {
-  body nav div a {
+  body nav > div a {
     font-size: 30px;
     margin-right: 10.66666667px;
   }
-  body nav div .icon-terminal {
+  body nav > div .icon-terminal {
     display: none;
   }
 }

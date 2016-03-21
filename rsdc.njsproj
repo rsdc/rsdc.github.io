@@ -38,7 +38,7 @@
     <Content Include="fonts\icomoon.woff" />
     <Content Include="google4ceec0005c9ae52c.html" />
     <Content Include="images\rsdc.github.io.jpg" />
-    <Content Include="images\rsdc.logo.gplus..edit.png" />
+    <Content Include="images\rsdc.logo.png" />
     <Content Include="index.html" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -50,6 +50,7 @@
     <Content Include="images\hr.gif" />
     <Content Include="images\nav-bg.gif" />
     <Compile Include="js\respond.js" />
+    <Content Include="schema\logo.json" />
     <Content Include="src\index.html" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +58,8 @@
     <Folder Include="fonts" />
     <Folder Include="images" />
     <Folder Include="js" />
+    <Folder Include="content\" />
+    <Folder Include="schema\" />
     <Folder Include="src" />
     <Folder Include="src\bin" />
     <Folder Include="src\obj" />
