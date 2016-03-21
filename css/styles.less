@@ -9,7 +9,7 @@
 @color-0: #efefef;
 @color-1: #b6b6b6;
 @color-2: #ffcc00;
-@color-3: lighten(#387fba, 10%);
+@color-3: lighten(#387fba, 12%);
 
 @font-0: 'Maven Pro', sans-serif;
 @font-1: 'Abel', sans-serif;
@@ -55,6 +55,11 @@ body {
     font: 18px/24px @font-0;
     text-shadow: 2px 1px 0 @base-1;
     cursor: default;
+
+    a { 
+        text-decoration: none;
+        &:visited { color: @color-0; }
+    }
 
     p {
         cursor: text;
@@ -125,7 +130,7 @@ body {
 
     section {
 
-        h2 { font-size: 24px;}
+        h2 { font-size: 24px; }
 
         h2, h3 {
             color: @color-3;

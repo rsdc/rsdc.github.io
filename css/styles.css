@@ -19,6 +19,12 @@ body {
   text-shadow: 2px 1px 0 #2a2a29;
   cursor: default;
 }
+body a {
+  text-decoration: none;
+}
+body a:visited {
+  color: #efefef;
+}
 body p {
   cursor: text;
 }
@@ -91,7 +97,7 @@ body section h2 {
 }
 body section h2,
 body section h3 {
-  color: #5898cd;
+  color: #609dcf;
   margin-top: 12px;
   margin-bottom: 36px;
 }
