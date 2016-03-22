@@ -51,15 +51,28 @@ body header {
 body header h1,
 body header img {
   margin: 10px auto;
-  cursor: pointer;
 }
-body header h1:hover,
-body header img:hover {
-  opacity: 0.8;
-}
-body header h1 {
+body header h1 > a,
+body header img {
   font: 30px 'Maven Pro', sans-serif;
   text-shadow: 3px 2px 1px #000000;
+  cursor: pointer;
+  -moz-transition: 120ms linear opacity;
+  -o-transition: 120ms linear opacity;
+  -webkit-transition: 120ms linear opacity;
+  transition: 120ms linear opacity;
+  -moz-transition-delay: 20ms;
+  -o-transition-delay: 20ms;
+  -webkit-transition-delay: 20ms;
+  transition-delay: 20ms;
+}
+body header h1 > a:hover,
+body header img:hover {
+  opacity: 0.8;
+  -moz-transition: 100ms linear opacity;
+  -o-transition: 100ms linear opacity;
+  -webkit-transition: 100ms linear opacity;
+  transition: 100ms linear opacity;
 }
 body nav {
   overflow: visible;
@@ -101,10 +114,27 @@ body nav div a:hover {
 body nav div a.connect {
   float: right;
 }
+body section a {
+  -moz-transition: 120ms linear opacity;
+  -o-transition: 120ms linear opacity;
+  -webkit-transition: 120ms linear opacity;
+  transition: 120ms linear opacity;
+  -moz-transition-delay: 20ms;
+  -o-transition-delay: 20ms;
+  -webkit-transition-delay: 20ms;
+  transition-delay: 20ms;
+}
 body section a,
 body section a:visited {
-  font: 20px 'Maven Pro', sans-serif;
+  font: 18px 'Abel', sans-serif;
   color: #ffcc00;
+}
+body section a:hover {
+  opacity: 0.8;
+  -moz-transition: 100ms linear opacity;
+  -o-transition: 100ms linear opacity;
+  -webkit-transition: 100ms linear opacity;
+  transition: 100ms linear opacity;
 }
 body section h2 {
   font-size: 24px;
@@ -115,11 +145,11 @@ body section h3 {
   margin-top: 12px;
   margin-bottom: 32px;
 }
-body section p:last-child {
-  margin-bottom: 16px;
+body section ul li > a {
+  font: 18px 'Abel', sans-serif;
 }
-body section p:not(:last-child) {
-  margin-bottom: 32px;
+body section p {
+  margin-bottom: 24px;
 }
 body section:last-child {
   margin-bottom: 92px;

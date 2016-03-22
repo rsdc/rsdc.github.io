@@ -18,6 +18,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="write.html" />
     <None Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults">
       <SubType>Content</SubType>
@@ -47,7 +48,6 @@
     <Content Include="README.md" />
     <Content Include="images\bullet.png" />
     <Content Include="images\hr.gif" />
-    <Compile Include="js\respond.js" />
     <Content Include="robots.txt" />
     <Content Include="schema\logo.json" />
     <Content Include="schema\sitemap.xml" />

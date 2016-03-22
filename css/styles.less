@@ -1,3 +1,5 @@
+// Variables
+
 @base-0: #000000;
 @base-1: #2a2a29;
 @base-2: #1c1c1c;
@@ -16,6 +18,9 @@
 
 @padding: 32px;
 @max-width: 900px;
+
+
+// Mixins / functions
 
 .reset-margin() {
     margin: 0;
@@ -41,6 +46,19 @@
     transition-delay: @param;
 }
 
+.linear-hover-delay(@duration, @offset, @value) {
+    
+    @effect: opacity;
+    @transition: linear;
+    @offset-trans: (@duration + @offset);
+    .transition(@offset-trans @transition opacity);
+    .transition-delay(@offset);
+    
+    &:hover { opacity: @value; .transition(@duration @transition opacity); }
+}
+
+// Global properties
+
 ::-webkit-scrollbar { width: 6px; }
 
 ::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background: #000000;  }
@@ -51,10 +69,15 @@
     -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.5); 
 }
 
+
+// Resets
+
 html, body, div, h1, h2, h3 { .reset-margin() }
 
 html, body { .reset-height() }
 
+
+// Markup styles
 
 body {
     background: @background-0;
@@ -64,7 +87,7 @@ body {
     cursor: default;    
     overflow-y: auto;    
 
-    a { 
+    a {         
         color: @color-0; 
         text-decoration: none;
         &:visited { color: @color-0; }
@@ -79,16 +102,14 @@ body {
         text-align: center;
         background: @background-1;
 
-        h1, img {
-            margin: 10px auto;
-            cursor: pointer;
-
-            &:hover { opacity: 0.8; }
-        }
-
-        h1 {            
+        h1, img { margin: 10px auto; }
+        
+        h1 > a, img {
             font: 30px @font-0;
             text-shadow: 3px 2px 1px @base-0;
+            cursor: pointer;            
+            
+            .linear-hover-delay(100ms, 20ms, 0.8);
         }
     }
 
@@ -131,7 +152,13 @@ body {
 
     section {
 
-        a, a:visited { font: 20px @font-0; color: @color-2; }
+        a {
+            &, &:visited { font: 18px @font-1; color: @color-2; }
+
+            .linear-hover-delay(100ms, 20ms, 0.8);
+        } 
+        
+        
 
         h2 { font-size: 24px; }
 
@@ -140,10 +167,16 @@ body {
             margin-top: 12px;
             margin-bottom: 32px;
         }
+        
+        ul { 
+            // list-style-type: none;
+             
+            li > a { font: 18px @font-1 }
+        }
 
-        p:last-child { margin-bottom: 16px; }
-        p:not(:last-child) { margin-bottom: 32px; }
 
+        p { margin-bottom: (@padding - (@padding / 4)); } 
+               
         &:last-child { margin-bottom: 92px; }
         &:not(:last-child) { padding-bottom: 0; }
 
